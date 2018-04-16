@@ -22,8 +22,13 @@ public class Main {
             }
 
         });
+        hiloA.setPriority(10);
+        hiloB.setPriority(Thread.MIN_PRIORITY);
+        hiloC.setPriority(Thread.MIN_PRIORITY);
         hiloA.start();
+        Thread.yield();
         hiloB.start();
         hiloC.start();
+
     }
 }
